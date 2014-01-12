@@ -1,0 +1,165 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+}
+
+
+/*
+ * Style tweaks
+ * --------------------------------------------------
+ */
+html,
+body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+  height: 100%;
+  width: 100%;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  right: 40px;
+  z-index: 5;
+}
+
+.app-wrapper {
+  position: relative;
+  height: 90%;
+  width: 100%;
+}
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 0;
+}
+  #map .leaflet-top .leaflet-control {
+    margin-top: 20px;
+  }
+.main-container {
+  position: relative;
+  z-index: 5;
+  padding-top: 20px;
+}
+  .main-container .input-box {
+    padding-right: 0;
+    margin-bottom: 10px;
+  }
+    .main-container .input-box .form-control {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  .main-container .btn-box {
+    padding-left: 0;
+  }
+    .main-container .btn-box .btn-lg {
+      border-radius: 0;
+      padding: 10px 16px 11px
+    }
+
+.list-group {
+  height: 400px;
+  overflow-y: auto;
+}
+
+.close-btn {
+  position: absolute;
+  top: 0;
+  right: 15px;
+  z-index: 10;
+  font-size: 18px;
+  padding: 10px;
+}
+[ng-cloak] {
+  display: none !important;
+}
+
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all 0.25s ease-in-out;
+    -moz-transition: all 0.25s ease-in-out;
+    transition: all 0.25s ease-in-out;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute !important;
+    top: 0;
+    /*width: 50%;  6 columns */
+  }
+}
+
+#map {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: 0;
+}
+
+#app-wrapper .panel {
+	background-color: rgba(255, 255, 255, .7);
+}
+
+.my-show-hide-animation.ng-hide-remove,
+.my-show-hide-animation.ng-hide-add {
+  /* remember, the .hg-hide class is added to element
+     when the active class is added causing it to appear
+     as hidden. Therefore set the styling to display=block
+     so that the hide animation is visible */
+  display:block!important;
+}
+
+.my-show-hide-animation.ng-hide-add {
+  -webkit-animation:0.5s hide;
+  animation:0.5s hide;
+}
+
+@keyframes hide {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+@-webkit-keyframes hide {
+  from { opacity:1; }
+  to { opacity:0; }
+}
+
+.my-show-hide-animation.ng-hide-remove {
+  -webkit-animation:0.5s show;
+  animation:0.5s show;
+}
+
+@keyframes show {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@-webkit-keyframes show {
+  from { opacity:0; }
+  to { opacity:1; }
+}
